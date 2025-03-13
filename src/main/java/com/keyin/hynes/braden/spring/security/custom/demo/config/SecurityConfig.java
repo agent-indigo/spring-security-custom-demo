@@ -14,6 +14,7 @@ public final class SecurityConfig extends WebSecurityConfiguration {
   @Autowired
   private UserService userDetailsService;
   public SecurityConfig() {
+    super();
     userDetailsService = new UserService();
   }
   @Bean
