@@ -5,9 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public final class SecurityConfig extends WebSecurityConfiguration {
@@ -16,8 +18,14 @@ public final class SecurityConfig extends WebSecurityConfiguration {
   public SecurityConfig() {
     userDetailsService = new UserService();
   }
-  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+  @Bean
+  public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    return http.build();
+  }
+  @Bean
+  public AuthenticationManagerBuilder authenticationManagerBuilder(AuthenticationManagerBuilder auth) throws Exception {
     auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+    return auth;
   }
   @Bean
   public DaoAuthenticationProvider authenticationProvider() {
