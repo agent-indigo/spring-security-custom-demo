@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  spring-security-custom-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: spring-security-custom-demo:latest
+    ports:
+      - "8080:8080"
