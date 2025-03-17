@@ -1,5 +1,5 @@
-# Spring Security Example
+# Spring Security Custom Demo
 
 ## Description
 
-Example of using Spring Security using Lombok and a custom JPA Entity for users.
+Spring Security demo using Lombok and a custom JPA Entity for users.

@@ -23,4 +23,8 @@ public final class UserEntity extends DataEntity implements UserDetails {
   private String username;
   private String password;
   private List<GrantedAuthority> authorities;
+  private boolean accountNonExpired;
+  private boolean accountNonLocked;
+  private boolean credentialsNonExpired;
+  private boolean enabled;
 }
