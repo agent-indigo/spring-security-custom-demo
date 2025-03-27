@@ -37,7 +37,7 @@
     springsecuritycustomdemo
   </name>
   <description>
-    Demo project for Spring Boot
+    Spring Security demo using Lombok and a custom JPA Entity for users.
   </description>
   <properties>
 	<java.version>
