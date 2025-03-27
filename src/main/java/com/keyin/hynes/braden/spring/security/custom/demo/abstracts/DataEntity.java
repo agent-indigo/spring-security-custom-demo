@@ -7,5 +7,5 @@ import lombok.Getter;
 public abstract class DataEntity {
   @Id
   @Getter
-  private UUID id = UUID.randomUUID();
+  private final UUID id = UUID.randomUUID();
 }
