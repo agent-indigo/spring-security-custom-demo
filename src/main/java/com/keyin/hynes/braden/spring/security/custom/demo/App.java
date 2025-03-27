@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @ComponentScan(basePackages = {
   "com.keyin.hynes.braden.spring.security.custom.demo.config",
-  "com.keyin.hynes.braden.spring.security.custom.demo.controllers",
   "com.keyin.hynes.braden.spring.security.custom.demo.entities",
   "com.keyin.hynes.braden.spring.security.custom.demo.interfaces.repositories",
   "com.keyin.hynes.braden.spring.security.custom.demo.services"

@@ -8,10 +8,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 @Entity
 @Table(name = "users")
 @Data
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public final class UserEntity extends DataEntity implements UserDetails {
   @Column(unique = true)
   private String username;
