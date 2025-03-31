@@ -34,7 +34,7 @@
     0.0.1
   </version>
   <name>
-    springsecuritycustomdemo
+    spring-security-custom-demo
   </name>
   <description>
     Spring Security demo using Lombok and a custom JPA Entity for users.
