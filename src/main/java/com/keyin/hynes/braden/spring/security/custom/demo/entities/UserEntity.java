@@ -18,7 +18,7 @@ public final class UserEntity extends DataEntity implements UserDetails {
   @Column(unique = true)
   private String username;
   private String password;
-  @Column(columnDefinition = "text[]")
+  @Column(columnDefinition = "varchar[]")
   private List<SimpleGrantedAuthority> authorities;
   private boolean accountNonExpired;
   private boolean accountNonLocked;
